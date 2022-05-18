@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 //tries to connect to a locally hosted mongodb database, the database path can easily be swapped out
 //for a path to a different host (e.g atlas). The server will only start if the application was able to 
 //successfully connect to the database.
-const databasePath = 'mongodb://127.0.0.1:27017/evergreen';
+const databasePath = 'mongodb://127.0.0.1:27017/scrapper';
 mongoose.connect(databasePath)
     .then((result) => {
         app.listen(3500, () => {
