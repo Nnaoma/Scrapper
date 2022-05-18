@@ -15,13 +15,28 @@ async function startupPuppeteer() {
 
 module.exports.getIndexPage = (req, res) => { res.sendFile('html/index.html', { root: '../scrapper' }) }
 
-module.exports.getResultsPage = (req, res) => { res.render('result') }
+module.exports.getResultsPage = async(req, res) => {
+    let nextPageNumber = Number.parseInt(req.params.page);
+    const options = { page: nextPageNumber, limit: 10 }
+    let data = await model.paginate({}, options);
+    let link = '';
+    if (data.hasNextPage) {
+        link = `/results/${data.nextPage}`;
+    }
+    res.render('result', { data: data.docs, status: !data.hasNextPage, link });
+}
 
 module.exports.postIndexPage = async(req, res) => {
     const { selector, url } = req.body;
     console.log(selector, url);
-    res.status(200);
-    res.send('successfull');
 
-    scrapeControl(startupPuppeteer, selector, url);
+    try {
+        await scrapeControl(startupPuppeteer, selector, url);
+        res.status(201);
+        res.redirect('/results/1');
+    } catch (err) {
+        res.status(400);
+        res.sendFile('html/index.html', { root: '../scrapper' });
+        console.log(err);
+    }
 }

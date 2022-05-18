@@ -4,7 +4,7 @@ const router = Router();
 
 router.get('/', controller.getIndexPage);
 router.get('/home', controller.getIndexPage);
-router.get('/results', controller.getResultsPage);
+router.get('/results/:page', controller.getResultsPage);
 
 router.post('/', controller.postIndexPage);
 router.post('/home', controller.postIndexPage);

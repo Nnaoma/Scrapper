@@ -19,15 +19,13 @@
                 <h6>
                     <%= element.url %>
                 </h6>
-                <%  for (const e of element.result) { %>
-                    <p>
-                        <%= e %>
-                    </p>
-                    <% } %>
+                <p>
+                    <%= element.result %>
+                </p>
             </div>
             <% } %>
 
-                <a href="" class="next <%= status %>">next</a>
+                <a href="<%= link %>" class="next <%= status %>">next</a>
     </div>
 </body>
 

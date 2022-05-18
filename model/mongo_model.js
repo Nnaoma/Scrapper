@@ -4,7 +4,7 @@ const paginate = require('mongoose-paginate-v2');
 const scrappedDataSchema = new mongoose.Schema({
     selector: { type: String, required: true },
     url: { type: String, required: true },
-    result: [String],
+    result: { type: String }
 });
 
 scrappedDataSchema.plugin(paginate);

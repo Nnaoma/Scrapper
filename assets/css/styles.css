@@ -61,6 +61,7 @@
     min-height: 100px;
     box-shadow: 0 0 3px black;
     padding: 15px;
+    margin-top: 20px;
 }
 
 .form-outmost-div-parent div.inner p {
@@ -93,6 +94,6 @@
     padding: 7px 25px;
 }
 
-.form-outmost-div-parent a.hide {
+.form-outmost-div-parent a.true {
     display: none;
 }
