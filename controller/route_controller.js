@@ -1,6 +1,7 @@
 const path = require('path');
 const puppeteer = require('puppeteer');
 const { scrapeControl } = require('./page_controller');
+const model = require('../model/mongo_model');
 
 async function startupPuppeteer() {
     try {
@@ -14,7 +15,9 @@ async function startupPuppeteer() {
 
 module.exports.getIndexPage = (req, res) => { res.sendFile('html/index.html', { root: '../scrapper' }) }
 
-module.exports.postIndexPage = (req, res) => {
+module.exports.getResultsPage = (req, res) => { res.render('result') }
+
+module.exports.postIndexPage = async(req, res) => {
     const { selector, url } = req.body;
     console.log(selector, url);
     res.status(200);

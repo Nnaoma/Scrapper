@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+.form-outmost-div-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.form-inner-div-parent {
+    max-width: 350px;
+    min-width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 700px;
+    min-height: 500px;
+}
+
+.form-inner-div-parent form {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(rgb(255, 255, 255), rgb(192, 23, 23));
+}
+
+.form-inner-div-parent form input {
+    padding: 5px;
+    width: 96%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: none;
+    height: 35px;
+}
+
+.form-inner-div-parent form button {
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    background-color: rgb(0, 0, 10);
+    border: none;
+    height: 35px;
+    color: white;
+}
+
+.form-inner-div-parent form h4 {
+    color: black;
+}
+
+.form-outmost-div-parent div.inner {
+    width: 96%;
+    height: auto;
+    min-height: 100px;
+    box-shadow: 0 0 3px black;
+    padding: 15px;
+}
+
+.form-outmost-div-parent div.inner p {
+    word-wrap: break-word;
+    color: green;
+    font-size: medium;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.form-outmost-div-parent div.inner h4 {
+    font-size: x-large;
+    margin: 0;
+}
+
+.form-outmost-div-parent div.inner h6 {
+    font-size: large;
+    margin-top: 15px;
+}
+
+.form-outmost-div-parent a.next {
+    display: inline-block;
+    background-color: black;
+    width: 20%;
+    height: 35px;
+    margin-top: 8px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px 25px;
+}
+
+.form-outmost-div-parent a.hide {
+    display: none;
+}

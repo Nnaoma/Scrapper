@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/files/stylesheet/styles.css" rel="stylesheet" />
+    <link href="/files/css/styles.css" rel="stylesheet" />
     <title>Scrapper</title>
 </head>
 
 <body>
-    <div>
-        <div>
+    <div class="form-outmost-div-parent">
+        <div class="form-inner-div-parent">
             <form method="post">
                 <h4>Fill in the details</h4>
 
-                <label for="selector">Css Selector</label>
-                <input type="text" name="selector" placeholder="#table .header" required/>
+                <!--<label for="selector">Css Selector</label>-->
+                <input type="text" name="selector" placeholder="css-selector (e.g #table .header)" required/>
 
-                <label for="url">Website Url</label>
-                <input type="url" name="url" placeholder="https://example.com" required/>
+                <!--<label for="url">Website Url</label>-->
+                <input type="url" name="url" placeholder="site link (e.g https://example.com)" required/>
                 <button type="submit">Submit</button>
             </form>
         </div>
